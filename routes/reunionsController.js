@@ -70,7 +70,7 @@ router.post('/',(req, res) => {
         to: emails,
         subject: "Invitation à la reunion : "+req.body.nom_reunion,
         text: nomCreateur+" vous invite à voter pour la meilleur date de réunion ici :\n"+
-        "http://localhost:"+PORT_VUE+"/votes \n Voici le code d'accès au vote: \n"+req.body.mot_de_passe
+        PORT_VUE+"/votes \n Voici le code d'accès au vote: \n"+req.body.mot_de_passe
       };
       
       transporter.sendMail(mailOptions, function(error, info){
