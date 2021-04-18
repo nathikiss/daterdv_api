@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-uri = 'mongodb+srv://admin:omiORHaTfmgU4QIG@cluster0.2ver9.mongodb.net/daterdv';
+uri = process.env.URI;
 mongoose.connect(uri,
     { useNewUrlParser: true, useUnifiedTopology: true },
     (err) => {
